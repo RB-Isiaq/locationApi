@@ -13,7 +13,6 @@ const getLocationTemp = async (req, res) => {
     ipAddress = ipAddress.split("::ffff:")[1];
   }
   const location = geoip.lookup(ipAddress);
-  console.log(location);
   const city = location?.city || "Lagos";
 
   const weatherApiKey = process.env.API_KEY;
