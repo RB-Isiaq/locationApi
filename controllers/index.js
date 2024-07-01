@@ -2,7 +2,7 @@ const axios = require("axios");
 const geoip = require("geoip-lite");
 
 const getLocationTemp = async (req, res) => {
-  const visitorName = req.query.visitor_name;
+  const visitorName = req.query.visitor_name.replaceAll('"', "");
   let ipAddress =
     req.headers["x-forwarded-for"] || req.connection.remoteAddress;
 
