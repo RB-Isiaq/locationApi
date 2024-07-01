@@ -22,7 +22,7 @@ This endpoint returns a greeting message along with the visitor's IP address, lo
 
 To greet a visitor named "John", you would use the following request:
 
-[GET] `https://<your-deployment-url>/api/hello?visitor_name=John`
+[GET] `https://location-api.zeabur.app/api/hello?visitor_name=John`
 
 #### Example Response
 
