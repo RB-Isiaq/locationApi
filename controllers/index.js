@@ -13,7 +13,7 @@ const getLocationTemp = async (req, res) => {
     ipAddress = ipAddress.split("::ffff:")[1];
   }
   const location = geoip.lookup(ipAddress);
-  const city = location ? location.city : "Lagos";
+  const city = location?.city || "Lagos";
 
   const weatherApiKey = process.env.API_KEY;
   const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weatherApiKey}`;
